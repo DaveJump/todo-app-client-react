@@ -15,12 +15,12 @@ const Routes: React.FC = () => {
       </Route>
       <Route path="/">
         <Home />
-      </Route>
-      <Route path="/settings">
-        <Settings />
-      </Route>
-      <Route path="/settings/changePwd">
-        <ChangePwd />
+        <Route path="/settings">
+          <Settings />
+          <Route path="/settings/changePwd">
+            <ChangePwd />
+          </Route>
+        </Route>
       </Route>
     </Switch>
   )

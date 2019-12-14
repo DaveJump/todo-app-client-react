@@ -1,8 +1,8 @@
 import React from 'react'
 import AppTabBar from '@/components/TabBar'
 import { HomePageTypes } from '@/types'
-import Todos from '@/components/Todos'
-import User from '@/components/User'
+import Todos from '@/pages/Todos'
+import User from '@/pages/User'
 
 class Home extends React.Component<{}, HomePageTypes.HomePageState> {
   state = {

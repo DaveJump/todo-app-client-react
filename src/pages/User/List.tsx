@@ -2,7 +2,7 @@ import React from 'react'
 import { WhiteSpace, List } from 'antd-mobile'
 import { UserTypes } from '@/types'
 
-const UserList: React.FC<UserTypes.UserListProps> = (props) => {
+const UserList: React.FC<UserTypes.UserListProps> = props => {
   const options = props.options
   return (
     <>

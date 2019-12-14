@@ -7,5 +7,15 @@ html {
 }
 
 .todo-app-wrap {
-  height: 100vh;
+  height: $fullpage-height;
+}
+
+.stretch-page {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: $fullpage-height;
+  background-color: $background-color-base;
+  z-index: 100;
 }

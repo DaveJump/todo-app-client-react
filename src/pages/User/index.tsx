@@ -4,6 +4,7 @@ import UserList from './List'
 import avatar from 'icons/avatar_boy.png'
 import settings from 'icons/settings.png'
 import { UserTypes } from '@/types'
+import { withRouter, RouteComponentProps } from 'react-router-dom'
 
 const UserListOptions: UserTypes.UserListProps['options'] = {
   settings: {
@@ -13,12 +14,20 @@ const UserListOptions: UserTypes.UserListProps['options'] = {
   }
 }
 
-class User extends React.Component<{}, UserTypes.UserState> {
+interface UserProps extends RouteComponentProps {}
+
+class User extends React.Component<UserProps, UserTypes.UserState> {
   state = {
     userInfo: {
       avatarSrc: avatar,
       nickName: '未登录'
     }
+  }
+
+  onListItemClick = (option: UserTypes.UserListKeys): void => {
+    this.props.history.push({
+      pathname: `/${option}`
+    })
   }
 
   render() {
@@ -27,10 +36,13 @@ class User extends React.Component<{}, UserTypes.UserState> {
     return (
       <>
         <UserInfo avatarSrc={avatarSrc} nickName={nickName} />
-        <UserList options={UserListOptions} />
+        <UserList
+          options={UserListOptions}
+          onClick={this.onListItemClick}
+        />
       </>
     )
   }
 }
 
-export default User
+export default withRouter(User)

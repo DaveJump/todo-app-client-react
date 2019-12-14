@@ -54,6 +54,7 @@
       "last 1 safari version"
     ]
   },
+  "typings": "./src/types/index.d.ts",
   "theme": {
     "@color-text-base": "#333"
   }
