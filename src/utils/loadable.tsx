@@ -3,7 +3,7 @@ import Loadable from 'react-loadable'
 
 const LoadingComponent: React.FC = () => {
   return (
-    <div>Loading...</div>
+    <div></div>
   )
 }
 

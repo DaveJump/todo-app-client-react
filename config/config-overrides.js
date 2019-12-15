@@ -33,7 +33,8 @@ const enhanceStyleLoader = () => config => {
           options: {
             resources: [
               path.resolve(__dirname, '../src/assets/scss/vars.scss'),
-              path.resolve(__dirname, '../src/assets/scss/mixins.scss')
+              path.resolve(__dirname, '../src/assets/scss/mixins.scss'),
+              path.resolve(__dirname, '../src/assets/scss/placeholders.scss')
             ]
           }
         })

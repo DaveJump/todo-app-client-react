@@ -1,0 +1,18 @@
+%img-width {
+  img {
+    width: 20px;
+  }
+}
+
+.todos-header {
+  @extend %img-width;
+}
+
+.todos-list {
+  height: calc(100vh - 90px);
+}
+
+.modify-todo {
+  @extend %img-width;
+  @extend %stretch-page;
+}

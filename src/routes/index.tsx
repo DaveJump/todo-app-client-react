@@ -6,6 +6,7 @@ const Home = loadable(() => import('@/pages/Home'))
 const Login = loadable(() => import('@/pages/Login'))
 const Settings = loadable(() => import('@/pages/Settings'))
 const ChangePwd = loadable(() => import('@/pages/Settings/ChangePwd'))
+const ModifyTodo = loadable(() => import('@/pages/Todos/Modify'))
 
 const Routes: React.FC = () => {
   return (
@@ -20,6 +21,9 @@ const Routes: React.FC = () => {
           <Route path="/settings/changePwd">
             <ChangePwd />
           </Route>
+        </Route>
+        <Route path="/todo/:id">
+          <ModifyTodo />
         </Route>
       </Route>
     </Switch>

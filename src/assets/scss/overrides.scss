@@ -1,11 +1,8 @@
-// .todo-app-wrap{
-  // .am-list-item{
-  //   .am-input-label,
-  //   .am-input-control{
-  //     font-size: $font-size-base;
-  //     input{
-  //       font-size: $font-size-base;
-  //     }
-  //   }
-  // }
-// }
+.todo-app-wrap{
+  .am-search {
+    background: none;
+  }
+  .am-search-cancel {
+    color: $color-text-primary;
+  }
+}

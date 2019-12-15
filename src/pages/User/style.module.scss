@@ -3,7 +3,7 @@
   height: 125px;
   overflow: hidden;
   text-align: center;
-  background-color: #fff;
+  background-color: $background-color-light;
   @include hairline('bottom');
   @include align-center-flex('both');
 }

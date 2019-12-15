@@ -113,3 +113,43 @@ export namespace SettingTypes {
   }
   export type ChangePwdState = Partial<ChangePwdErrorState & ChangePwdValueState>
 }
+
+export namespace TodosTypes {
+  export interface TodosHeaderProps {
+    onEditClick?(): void
+    onAddTodoClick?(): void
+  }
+
+  export interface TodosHeaderState {}
+
+  export interface TodosSearchBarProps {
+    onSearchTextChange?(value: string): void
+  }
+
+  export interface TodosSearchBarState {
+    searchValue: string
+  }
+
+  export interface TodoListState {
+    dataSource: any,
+    list: any[],
+    currentPage: number,
+    pageSize: number,
+    totalSize: number,
+    loadingMore: boolean,
+    refreshing: boolean,
+    listHeight: number
+  }
+
+  export interface TodoModifyErrorState {
+    todoTitleError: boolean,
+    todoDescError: boolean
+  }
+  export interface TodoModifyValueState {
+    [type: string]: boolean | string
+    todoTitle: string
+    todoDesc: string
+  }
+
+  export type TodoModifyState = Partial<TodoModifyErrorState & TodoModifyValueState>
+}

@@ -13,7 +13,7 @@ export default function CreateNavigator(NavTitle: React.FC<{}> | any) {
 
     render() {
       const LeftSlot = this.props.navigable ? {
-        icon: <Icon type="left" />,
+        icon: <Icon type="left" size="md" />,
         onLeftClick: this.onLeftClick
       } : {}
 
