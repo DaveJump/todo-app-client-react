@@ -18,8 +18,7 @@ class TodosSearchBar extends React.Component<
     this.setState({
       searchValue: value
     })
-    const { onSearchTextChange } = this.props
-    onSearchTextChange && onSearchTextChange(value)
+    this.props.onSearchTextChange?.(value)
   }
 
   render() {
@@ -42,13 +41,11 @@ class TodosHeader extends React.Component<
   static SearchBar: typeof TodosSearchBar
 
   onEditClick = () => {
-    const { onEditClick } = this.props
-    onEditClick && onEditClick()
+    this.props.onEditClick?.()
   }
 
   onAddTodoClick = () => {
-    const { onAddTodoClick } = this.props
-    onAddTodoClick && onAddTodoClick()
+    this.props.onAddTodoClick?.()
   }
 
   render() {

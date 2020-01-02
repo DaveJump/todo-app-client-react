@@ -12,7 +12,7 @@ const UserList: React.FC<UserTypes.UserListProps> = props => {
           Object.keys(options).map(opt => (
             <List.Item
               arrow={options[opt].arrowDirection}
-              onClick={() => { props.onClick && props.onClick(opt as UserTypes.UserListKeys) }}
+              onClick={() => { props.onClick?.(opt as UserTypes.UserListKeys) }}
               thumb={options[opt].thumb}
               key={opt}
             >

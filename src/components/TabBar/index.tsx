@@ -15,10 +15,7 @@ class AppTabBar extends React.Component<TabBarTypes.TabBarProps, TabBarTypes.Tab
     this.setState({
       selectedTab: key
     })
-    // 此处可用optional-chaining，但是vscode会报错，待解决
-    // this.props.onTabBarChange?.(key)
-    const { onTabBarChange } = this.props
-    onTabBarChange && onTabBarChange(key)
+    this.props.onTabBarChange?.(key)
   }
 
   render() {

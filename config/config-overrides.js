@@ -6,7 +6,8 @@ const {
   adjustWorkbox,
   setWebpackOptimizationSplitChunks,
   addDecoratorsLegacy,
-  addLessLoader
+  addLessLoader,
+  addBabelPlugins
 } = require('customize-cra')
 
 // Enable source map in dev-env
@@ -111,5 +112,8 @@ module.exports = override(
   addLessLoader({
     javascriptEnabled: true,
     modifyVars: require('../package.json').theme
-  })
+  }),
+  ...addBabelPlugins(
+    '@babel/plugin-proposal-optional-chaining'
+  )
 )
